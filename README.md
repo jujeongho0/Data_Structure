@@ -120,3 +120,26 @@
 ![4](https://user-images.githubusercontent.com/62659407/121133635-8bf4d180-c86d-11eb-8a9b-2b95d790516a.png)
 
 ---
+
+## treeTraversal
+- 개요
+  + tree를 각각 전위 순회(Preorder), 중위 순회(Inorder), 후위 순회(Postorder)로 탐색하여 노드 출력해주는 프로그램
+
+- 구현 사항
+  + makeNode() : Linked List를 이용해 Node와 Node 간의 관계를 입력받아 tree 생성
+  + preorder() : recursive하게 실행됨으로써 (root, left, right) 순으로 Node 출력
+  + inorder() : recursive하게 실행됨으로써 (left, root, right) 순으로 Node 출력
+  + postorder() : recursive하게 실행됨으로써 (left, right, root) 순으로 Node 출력 
+
+- 입력 예시
+
+![1](https://user-images.githubusercontent.com/62659407/121134650-9c597c00-c86e-11eb-85a9-6cb7a00a913c.png)
+
+- 출력 예시
+```
+  Preorder : [F] [B] [A] [D] [C] [E] [G] [I] [H]
+  Inorder : [A] [B] [C] [D] [E] [F] [G] [H] [I]
+  Postorder : [A] [C] [E] [D] [B] [H] [I] [G] [F]
+```
+
+---
