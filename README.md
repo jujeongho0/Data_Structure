@@ -188,8 +188,8 @@
   + 1. CBT(complete binary tree)의 가장 마지막 원소에 원하는 값을 삽입
   + 2. 부모가 나보다 작다면 부모와 자식의 값을 교환
   + 3. 2번에서 부모가 없거나, 부모가 자식보다 클 경우에 끝(Max Heap)
-  + deleteHeap() : (최대값을 삭제하는 코드)
-  + 1. Root(Max Heap에서 최대값은 항상 Root!) Node를 Heap의 가장 마지막 Node와 교환
+  + deleteHeap() :
+  + 1. Root(Max Heap에서 최대값은 항상 Root) Node를 Heap의 가장 마지막 Node와 교환
   + 2. 교환된 가장 마지막 Node 삭제
   + 3. 새로운 Root Node의 알맞은 위치를 찾아서 내려간다.(Max Heap)
   + heapType : Heap을 구현하기 위한 구조체(Heap은 보통 배열로 표현)
@@ -226,11 +226,6 @@
   + 3. predecessor Node 삭제
   + displayInorder() : BST의 Node를 Inorder 방식으로 출력
   + menu(): BST 관리 메뉴 출력
-  + 2. 교환된 가장 마지막 Node 삭제
-  + 3. 새로운 Root Node의 알맞은 위치를 찾아서 내려간다.(Max Heap)
-  + heapType : Heap을 구현하기 위한 구조체(Heap은 보통 배열로 표현)
-  + creatHeap() : Heap 생성
-  + printHeap() : Heap Binary Tree의 Node 출력
 
 - 출력 예시
 
