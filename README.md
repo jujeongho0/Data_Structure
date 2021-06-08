@@ -46,7 +46,7 @@
 
 - 입력 예시
 ```
-  A / B * ( C + D ) + E
+  A/B*(C+D)+E
 ```
 
 - 출력예시
@@ -67,7 +67,7 @@
 
 - 출력 예시
 
-1 이미지
+![1](https://user-images.githubusercontent.com/62659407/121133595-826b6980-c86d-11eb-8a42-7f32fa6f7a89.png)
 
 ---
   
@@ -84,8 +84,8 @@
 
 - 출력 예시
 
-2 이미지 
-
+![2](https://user-images.githubusercontent.com/62659407/121133610-85fef080-c86d-11eb-8533-8dea2acf9a36.png)
+ 
 ---
 
 ## doubleLinkedList
@@ -104,7 +104,7 @@
 
 - 출력 예시
 
-3 이미지 
+![3](https://user-images.githubusercontent.com/62659407/121133624-88f9e100-c86d-11eb-91ea-df75d6286ff5.png)
 
 ---
 
@@ -117,6 +117,6 @@
 
 - 출력 예시
 
-4 이미지 
+![4](https://user-images.githubusercontent.com/62659407/121133635-8bf4d180-c86d-11eb-8a9b-2b95d790516a.png)
 
 ---
