@@ -234,14 +234,19 @@
 
 - 출력 예시
 
+  + Search a Node
 ![1](https://user-images.githubusercontent.com/62659407/121157009-29f39680-c884-11eb-9021-6773ee00fbb0.png)
 
+  + Insert a Node
 ![2](https://user-images.githubusercontent.com/62659407/121157020-2bbd5a00-c884-11eb-8474-e050b734ddce.png)
 
+  + Delete a Node(case 1) 
 ![3](https://user-images.githubusercontent.com/62659407/121157029-2d871d80-c884-11eb-9145-f51f97ab5614.png)
 
+  + Delete a Node(case 2)
 ![4](https://user-images.githubusercontent.com/62659407/121157034-2eb84a80-c884-11eb-94c4-536981b0a7a3.png)
 
+  + Delete a Node(case 3)
 ![5](https://user-images.githubusercontent.com/62659407/121157044-30820e00-c884-11eb-9459-58eb337f5b46.png)
 
 ---
