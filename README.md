@@ -39,10 +39,10 @@
 
 - 구현 사항
   + postfix() :
-  + &nbsp;&nbsp;1. 피연산자는 그냥 출력
-  + &nbsp;&nbsp;2-1. ')'가 나올 경우 → '('가 나올 때까지 pop → '(' 빼냄
-  + &nbsp;&nbsp;2-2. 나머지 → stack 맨 위에 있는 연산자의 우선순위가 stack에 넣으려는 연산자의 우선순위보다 같거나 높은 경우 계속 pop → 그 다음 stack에 넣음
-  + &nbsp;&nbsp;3. stack에 있는 모든 요소 출력
+  + &nbsp;&nbsp;&nbsp;&nbsp;1. 피연산자는 그냥 출력
+  + &nbsp;&nbsp;&nbsp;&nbsp;2-1. ')'가 나올 경우 → '('가 나올 때까지 pop → '(' 빼냄
+  + &nbsp;&nbsp;&nbsp;&nbsp;2-2. 나머지 → stack 맨 위에 있는 연산자의 우선순위가 stack에 넣으려는 연산자의 우선순위보다 같거나 높은 경우 계속 pop → 그 다음 stack에 넣음
+  + &nbsp;&nbsp;&nbsp;&nbsp;3. stack에 있는 모든 요소 출력
 
 - 입력 예시
 ```
@@ -178,20 +178,20 @@
 - 개요
   + Heap(큰 키(우선 순위)에 자주 액세스하거나 키(우선 순위) 중심으로 정렬된 시퀀스를 활용해야 할 때 유용한 자료구조) 구조를 이용해 Node를 관리 및 출력해주는 프로그램
   + (Heap 속성 2가지 :
-  + &nbsp;&nbsp;1.heap order property : 각 Node의 값은 자신의 자식 Node가 가진 값보다 크거나 같다(Max heap). 각 노드의 값은 자신의 자식 Node가 가진 값보다 작거나 같다(Min heap).
-  + &nbsp;&nbsp;2.heap shape property : 모양은 완전 이진 트리이다. 즉, 마지막 레벨의 모든 Node는 왼쪽에 쏠려 있다.)
+  + &nbsp;&nbsp;&nbsp;&nbsp;1.heap order property : 각 Node의 값은 자신의 자식 Node가 가진 값보다 크거나 같다(Max heap). 각 노드의 값은 자신의 자식 Node가 가진 값보다 작거나 같다(Min heap).
+  + &nbsp;&nbsp;&nbsp;&nbsp;2.heap shape property : 모양은 완전 이진 트리이다. 즉, 마지막 레벨의 모든 Node는 왼쪽에 쏠려 있다.)
 
 ![1](https://user-images.githubusercontent.com/62659407/121151688-8e602700-c87f-11eb-95f0-ece2eab3e827.png)
 
 - 구현 사항
   + insertHeap() : 
-  + &nbsp;&nbsp;1.CBT(complete binary tree)의 가장 마지막 원소에 원하는 값을 삽입
-  + &nbsp;&nbsp;2.부모가 나보다 작다면 부모와 자식의 값을 교환
-  + &nbsp;&nbsp;3.2번에서 부모가 없거나, 부모가 자식보다 클 경우에 끝(Max Heap)<br><br>
+  + &nbsp;&nbsp;&nbsp;&nbsp;1.CBT(complete binary tree)의 가장 마지막 원소에 원하는 값을 삽입
+  + &nbsp;&nbsp;&nbsp;&nbsp;2.부모가 나보다 작다면 부모와 자식의 값을 교환
+  + &nbsp;&nbsp;&nbsp;&nbsp;3.2번에서 부모가 없거나, 부모가 자식보다 클 경우에 끝(Max Heap)<br><br>
   + deleteHeap() :
-  + &nbsp;&nbsp;1.Root(Max Heap에서 최대값은 항상 Root) Node를 Heap의 가장 마지막 Node와 교환
-  + &nbsp;&nbsp;2.교환된 가장 마지막 Node 삭제
-  + &nbsp;&nbsp;3.새로운 Root Node의 알맞은 위치를 찾아서 내려간다.(Max Heap)<br><br>
+  + &nbsp;&nbsp;&nbsp;&nbsp;1.Root(Max Heap에서 최대값은 항상 Root) Node를 Heap의 가장 마지막 Node와 교환
+  + &nbsp;&nbsp;&nbsp;&nbsp;2.교환된 가장 마지막 Node 삭제
+  + &nbsp;&nbsp;&nbsp;&nbsp;3.새로운 Root Node의 알맞은 위치를 찾아서 내려간다.(Max Heap)<br><br>
   + heapType : Heap을 구현하기 위한 구조체(Heap은 보통 배열로 표현)<br><br>
   + creatHeap() : Heap 생성<br><br>
   + printHeap() : Heap Binary Tree의 Node 출력
@@ -206,12 +206,12 @@
 - 개요
   + Binary Search Tree(Binary Search + Linked List) 구조를 이용해 Node를 관리 및 출력해주는 프로그램
   + (BST 특징 2가지 :
-  + 1.Left subtree의 Node들은 상위 Node보다 작거나 같은 값
-  + 2.Right subtree의 Node들은 상위 Node보다 큰 값)<br><br>
+  + &nbsp;&nbsp;&nbsp;&nbsp;1.Left subtree의 Node들은 상위 Node보다 작거나 같은 값
+  + &nbsp;&nbsp;&nbsp;&nbsp;2.Right subtree의 Node들은 상위 Node보다 큰 값)<br><br>
   + (BST 탐색 순서 :
   + Tree의 Root Node의 값과 찾고자하는 값 비교 
-  + &nbsp;&nbsp;1.Node.key > target → Root 기준 왼쪽 subtree로 이동
-  + &nbsp;&nbsp;2.Node.key < target → Root 기준 오른쪽 subtree로 이동
+  + &nbsp;&nbsp;&nbsp;&nbsp;1.Node.key > target → Root 기준 왼쪽 subtree로 이동
+  + &nbsp;&nbsp;&nbsp;&nbsp;2.Node.key < target → Root 기준 오른쪽 subtree로 이동
   + → target과 일치하는 Node가 있을 때까지 반복)
 
 - 구현 사항
@@ -221,9 +221,9 @@
   + → case 1(x가 자식 Node가 없는 경우) : 해당 Node가 부모 Node의 left인지, right인지 파악 후 부모 Node의 left or right를 NULL로 변경
   + → case 2(x가 하나의 자식 Node를 가지는 경우) : 해당 Node를 지운 후, 해당 Node가 부모 Node의 left인지, right인지 파악 후 해당 Node의 자식 Node와 부모 Node를 연결(BST 특성상, 해당 Node의 자식 Node는 모두 부모 Node보다 작거나 같기 때문에 가능)
   + → case 3(x가 두개의 자식 Node를 가지는 경우) : 
-  + &nbsp;&nbsp;1.삭제할 Node의 왼쪽 subtree의 최댓값(predecessor)을 구함
-  + &nbsp;&nbsp;2.최댓값을 삭제 대상 Node에 복사
-  + &nbsp;&nbsp;3.predecessor Node 삭제<br><br>
+  + &nbsp;&nbsp;&nbsp;&nbsp;1.삭제할 Node의 왼쪽 subtree의 최댓값(predecessor)을 구함
+  + &nbsp;&nbsp;&nbsp;&nbsp;2.최댓값을 삭제 대상 Node에 복사
+  + &nbsp;&nbsp;&nbsp;&nbsp;3.predecessor Node 삭제<br><br>
   + displayInorder() : BST의 Node를 Inorder 방식으로 출력<br><br>
   + menu(): BST 관리 메뉴 출력<br><br>
 
