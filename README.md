@@ -250,3 +250,110 @@
 ![5](https://user-images.githubusercontent.com/62659407/121157044-30820e00-c884-11eb-9459-58eb337f5b46.png)
 
 ---
+
+## dijkstra
+- 개요
+  + Dijkstra 알고리즘을 이용해 하나의 시작점에서 도착점으로 가는 최단 경로를 출력해주는 프로그램<br><br>
+  + Dijkstra 알고리즘은 Greedy 접근법의 알고리즘이기 때문에 edge의 가중치가 음의 값을 가져서는 안됨
+  + → 각 단계의 이웃한 Node 사이의 weight만 고려하여 최단 경로를 계산하기 때문에, 이후에 음의 값을 갖는 edge가 있을 때 최단 경로 update 할 수 없음<br><br>
+  + 시작 Vertex에서 집합 S에 있는 Vertex만을 거쳐서 다른 Vertex로 가는 최단거리를 기록하는 배열이 반드시 있어야 한다.
+  + → 집합 S에는 최단 거리에 해당하는 정점이 하나씩 추가된다.
+
+- 구현 사항
+  + choose() : 현재 distance 배열에서 가장 작은 가중치 값이 위치하고 있는 배열의 인덱스를 찾아 반환 <br><br>
+  + Dijkstra() : 현재 정점까지의 거리 + 정점 w 까지의 거리가 기존의 정점 w 까지의 거리보다 가깝다면 그 정보를 갱신<br><br>
+  + printStep() : 시작점에서 도착점으로 가는 최단 경로 출력
+
+- 출력 예시
+
+![1](https://user-images.githubusercontent.com/62659407/121228299-8c21bb00-c8c7-11eb-8d77-9ecef6e284ca.png)
+
+---
+
+## bellman-ford
+- 개요
+  + Bellman-Ford 알고리즘을 이용해 하나의 시작점에서 도착점으로 가는 최단 경로를 출력해주는 프로그램<br><br>
+  + Bellman-Ford 알고리즘은 vertex 사이의 최단 경로를 구할 때, 그래프 내의 모든 edge를 기준으로 update
+  + → 음수의 가중치를 갖는 edge가 있어도 사용 가능<br><br>
+
+- 구현 사항
+  + BellmanFord() : 
+  + 1.시작점 초기화(cycle을 갖지 않는 경우에 대해)
+  + 2.각 vertex의 모든 edge에 대해 relax() → if d[v] > d[u] + w(u,v) : 새로운 경로를 추가했을 때, 기존 경로보다 작아지면 update
+  + 3.음수 cycle이 있는지 확인 → step 2를 통해 각 vertex마다 연결된 모든 edge에 대해 계산한 결과, 이미 최단경로가 나온 상태에서 또다시 더 적은 경로가 나온다면 그건 음수 cycle!
+
+- 출력 예시
+
+![1](https://user-images.githubusercontent.com/62659407/121229147-955f5780-c8c8-11eb-8068-ff64d328f66e.png)
+
+---
+
+## insertSort
+- 개요
+  + Insertion Sort(삽입 정렬) 알고리즘을 이용해  크기 순으로 정렬하고 출력해주는 프로그램
+  + → 현재 위치에서 그 이하의 배열들을 비교하면서 자신이 들어갈 위치를 찾아 그 위치에 삽입하는 정렬 알고리즘
+
+- 구현 사항
+  + insertionSort() : 
+  + 1.두 번째 인덱스부터 시작
+  + 2.하나의 값을 선정하고 해당 값을 자신보다 작은 요소를 찾을 때까지 이동하면서 자리를 교환
+  + 3.자리를 바꾸는 것이 아니라 위치에 삽입하는것. 삽입을 하기 위해 빈 공간을 만들어주고, 맞는 자리를 찾을 때까지 앞의 원소들을 뒤로 밀어줌
+
+- 입력 예시
+```
+  list[8] = {69, 10, 30, 2, 16, 8, 31, 22}
+```
+
+- 출력 예시
+
+![1](https://user-images.githubusercontent.com/62659407/121229799-672e4780-c8c9-11eb-8ca4-e47fb048003d.png)
+
+---
+
+## mergeSort
+- 개요
+  + Merge Sort 알고리즘을 이용해 리스트를 크기 순으로 정렬하고 출력해주는 프로그램
+  + → Divide and conquer 알고리즘(문제를 작은 2개의 문제로 분리하여 각각을 해결한 후, 결과를 모아 원래의 문제를 해결하는 알고리즘) 이용
+
+- 구현 사항
+  + mergeSort() : 
+  + 1.2개의 리스트의 값들을 처음부터 하나씩 비교하여 두 개의 리스트의 값 중 더 작은 값을 새로운 리스트 sorted로 옮김
+  + 2.둘 중 하나가 끝날 때까지 해당 과정을 반복
+  + 3.만약 둘 중 하나의 리스트가 먼저 끝나면 나머지 리스트의 값을 sorted 리스트로 복사
+  + 4.sorted 리스트를 원래의 리스트로 옮김
+
+- 입력 예시
+```
+  list[8] = {69, 10, 30, 2, 16, 8, 31, 22}
+```
+
+- 출력 예시
+
+![1](https://user-images.githubusercontent.com/62659407/121230276-02272180-c8ca-11eb-8a11-352b647ac14f.png)
+
+---
+
+## quickSort
+- 개요
+  + Quick Sort 알고리즘을 이용해 리스트를 크기 순으로 정렬하고 출력해주는 프로그램
+  + → Divide and conquer 알고리즘 이용
+  + → Merge Sort와 달리, 리스트를 비균등하게 분할<br><br>
+  + 1.리스트 안에 있는 한 요소를 선택, 이때 선택된 요소를 pivot이라 함
+  + 2.pivot을 기준으로 pivot보다 작은 요소들을 모두 pivot의 왼쪽으로, pivot보다 큰 요소들은 모두 pivot의 오른쪽으로 나눔(Divide)
+  + 3.pivot을 제외한 왼쪽 리스트와 오른쪽 리스트를 다시 정렬(Conquer)
+  + 4.정렬된 부분 리스트들을 하나의 리스트로 합침(Combine)
+
+- 구현 사항
+  + partition() : 임의의 pivot 값 선정 → 2개의 index(Left, Right)를 이용해 입력 리스트를 두 개의 부분 리스트로 나눔 → Left와 Right가 교차할 때까지 반복
+  + quickSort() : partition()을 이용해 recursive하게 실행해 리스트의 요소를 크기 순으로 정렬
+
+- 입력 예시
+```
+  list[8] = {69, 10, 30, 2, 16, 8, 31, 22}
+```
+
+- 출력 예시
+
+![1](https://user-images.githubusercontent.com/62659407/121231261-28998c80-c8cb-11eb-953a-8eb18e16a52f.png)
+
+---
